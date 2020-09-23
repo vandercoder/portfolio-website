@@ -1,6 +1,4 @@
-# Personal Website
-
-Personal website made using Vue.js
+# portfolio-vue
 
 ## Project setup
 ```
