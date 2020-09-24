@@ -14,11 +14,11 @@
       <a 
         v-for="project in projects" :key="project.id" 
         :href="project.link" target="_blank" rel="noopener noreferrer">
-        <div class="relative sm:flex cursor-pointer transition-opacity duration-300 py-2 hover:opacity-75">
+        <div class="relative sm:flex h-auto cursor-pointer transition-opacity duration-300 py-2 hover:opacity-75">
           <img 
-            class="sm:w-1/2 h-full background-transparent shadow-lg rounded-lg opacity-75" 
+            class="w-full h-full sm:w-1/2 background-transparent shadow-lg rounded-lg opacity-75" 
             v-bind:src="project.image" :alt="project.name">
-          <div class="flex items-center rounded-lg pt-2 pb-4 px-1 sm:px-4">
+          <div class="flex items-center rounded-lg pt-2 pb-4 px-1 sm:px-6">
             <div>
               <p class="text-base sm:text-lg font-semibold text-white"> {{ project.name }}
               <p class="text-sm sm:text-base font-light text-gray-300">{{ project.desc }}</p>
