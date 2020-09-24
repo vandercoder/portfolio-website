@@ -32,7 +32,8 @@
       "Wait this is it?" 
       <a 
         class="hvr-bounce-to-top" 
-        target="_blank" rel="noopener noreferrer" href="https://andika.xyz"
+        target="_blank" rel="noopener noreferrer" 
+        href="https://andikawilliam.github.io/"
       >Old portfolio</a>
     </div>
   </div>
