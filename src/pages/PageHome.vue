@@ -19,16 +19,32 @@
         class="hvr-bounce-to-top cursor-pointer pb-1" 
         v-on:click='$emit("go-to-page", "Stacks")'>
         stacks</span>. 
-      You can also check out my other works on my 
-      <a 
-        target="_blank" rel="noopener noreferrer" 
-        href="https://github.com/andikawilliam" 
-        class="hvr-bounce-to-top pb-1">Github.
-      </a> 
+      You can also check out some of my works on my 
+      <span 
+        class="hvr-bounce-to-top cursor-pointer pb-1"
+        v-on:click='$emit("go-to-page", "Portfolio")'>
+        portfolio</span>. 
     </p>
     <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
       Besides programming and helping around the house, I spend my time reading books 
       (no really), running, and learning the guitar. 
+    </p>
+    <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
+      Find me on
+      <a 
+        target="_blank" rel="noopener noreferrer" 
+        href="https://github.com/andikawilliam" 
+        class="mr-1">
+        <font-awesome-icon :icon="['fab', 'github']" fixed-width>
+        </font-awesome-icon>
+      </a>
+      <a 
+        target="_blank" rel="noopener noreferrer" 
+        href="https://github.com/andikawilliam"
+        class="mr-2">
+        <font-awesome-icon :icon="['fab', 'linkedin']" fixed-width>
+        </font-awesome-icon>
+      </a>
     </p>
   </div>
 </template>

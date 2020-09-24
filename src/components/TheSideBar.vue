@@ -1,7 +1,14 @@
 <template>
   <div>
-    <div class="absolute z-30 block lg:hidden top-0 right-0 p-8">
-      <div class="container" v-on:click="toggleSideBar" v-bind:class="{'active' : openSideBar}">
+    <div class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-8">
+      <div 
+        v-bind:class="{'opacity-0' : currentPage=='PageHome'}"
+        v-on:click="$emit('change-page', 'Home')"
+      >
+        <font-awesome-icon :icon="['fas', 'chevron-left']" fixed-width>
+        </font-awesome-icon>
+      </div>
+      <div class="cursor-pointer" v-on:click="toggleSideBar" v-bind:class="{'active' : openSideBar}">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -83,28 +90,24 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: inline-block;
-  cursor: pointer;
-}
 
 .bar1, .bar2, .bar3 {
-  width: 26px;
-  height: 3px;
+  width: 22px;
+  height: 2px;
   background-color: white;
   margin: 6px 0;
   transition: 0.4s;
 }
 
-.active .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-3px, 3px);
-  transform: rotate(-45deg) translate(-3px, 3px);
+.active .bar1 { opacity: 0; }
+
+.active .bar2 { 
+  -webkit-transform: rotate(-45deg) translate(-2px, 3px);
+  transform: rotate(-45deg) translate(2px, -1px);
 }
 
-.active .bar2 { opacity: 0; }
-
 .active .bar3 {
-  -webkit-transform: rotate(45deg) translate(-9px, -10px);
-  transform: rotate(45deg) translate(-9px, -10px);
+  -webkit-transform: rotate(45deg) translate(-2px, -4px);
+  transform: rotate(45deg) translate(-6px, -8px);
 }
 </style>
