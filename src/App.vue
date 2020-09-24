@@ -3,9 +3,16 @@
     <section 
       class="lg:flex px-10 py-16 font-montserrat text-white leading-relaxed"
     >
-    <TheSideBar v-on:change-page="changePage" :currentPage="currentPage"/>
+    <TheSideBar 
+      v-on:change-page="changePage" 
+      v-on:sidebar-active="activeOverlay = !activeOverlay"
+      :currentPage="currentPage"
+    />
     
-    <div id="content" class="lg:pl-32 lg:w-1/2">
+    <div 
+      id="content" class="lg:pl-32 lg:w-1/2 transition-opacity duration-300 lg:opacity-100"
+      v-bind:class="{'opacity-50': activeOverlay}"
+    >
       <transition name="fade" mode="out-in">
         <component :is="currentPage" v-on:go-to-page="changePage"></component>
       </transition>
@@ -29,6 +36,7 @@ export default {
   },
   data () {
     return {
+      activeOverlay: false,
       currentPage: "PageHome",
     }
   },

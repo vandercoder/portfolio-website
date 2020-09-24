@@ -22,7 +22,7 @@
     >
       <h3 class="text-xl px-8  text-gray-300 font-bold">Menu</h3>
       <div
-        class="block mt-4 px-8 font-semibold transition-opacity duration-300 hover:opacity-50 cursor-pointer"
+        class="block mt-4 px-8 font-semibold transition-opacity duration-300 hover:opacity-75 cursor-pointer"
         v-for="page in pages"
         :key="page.id"
         v-on:click="$emit('change-page', page.name)"
@@ -77,6 +77,7 @@ export default {
       return active;
     },
     toggleSideBar: function() {
+      this.$emit('sidebar-active');
       this.openSideBar = !this.openSideBar;
     },
     getIconFamily: function(page){

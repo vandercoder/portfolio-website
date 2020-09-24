@@ -5,7 +5,7 @@
         My Stacks
       </h1>
       <div class="text-lg sm:text-xl text-gray-300 font-thin tracking-wide">
-        Technologies that I use for my projects
+        Technologies that I use
       </div>
       <hr class="border-2 opacity-75 my-4">
     </div>
@@ -17,7 +17,7 @@
           {{ field.area}}
         </h2>
 
-        <h3 class="sm:inline-block text-lg sm:text-xl text-gray-400 font-semibold tracking-wide mt-4 sm:mt-2"
+        <h3 class="sm:inline-block text-lg sm:text-xl text-gray-400 font-medium tracking-wide mt-4 sm:mt-2"
         v-for="(stack, stackIndex) in field.stacks" :key="stack.name"
         v-bind:class="{ 'sm:pl-12':stackIndex !== 0, 'opacity-25':!stack.active}"
         >

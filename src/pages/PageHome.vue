@@ -40,7 +40,7 @@
       </a>
       <a 
         target="_blank" rel="noopener noreferrer" 
-        href="https://github.com/andikawilliam"
+        href="https://www.linkedin.com/in/andika-william-62777314a/"
         class="mr-2">
         <font-awesome-icon :icon="['fab', 'linkedin']" fixed-width>
         </font-awesome-icon>

@@ -5,7 +5,7 @@
         Showcase
       </h1>
       <p class="text-lg sm:text-xl text-gray-300 font-thin tracking-wide">
-        Web design 
+        Web design projects
       </p>
       <hr class="border-2 opacity-75 my-4 ">
     </div>
@@ -16,7 +16,7 @@
         :href="project.link" target="_blank" rel="noopener noreferrer">
         <div class="relative sm:flex cursor-pointer transition-opacity duration-300 py-2 hover:opacity-75">
           <img 
-            class="sm:w-1/2 background-transparent shadow-lg rounded-lg opacity-75" 
+            class="sm:w-1/2 h-full background-transparent shadow-lg rounded-lg opacity-75" 
             v-bind:src="project.image" :alt="project.name">
           <div class="flex items-center rounded-lg pt-2 pb-4 px-1 sm:px-4">
             <div>
