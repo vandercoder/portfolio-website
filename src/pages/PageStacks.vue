@@ -47,7 +47,7 @@ export default {
           area: "Programming Languages",
           stacks: [
             { name: 'Python', icon: 'python', active: true},
-            { name: 'Javascript', icon: 'js-square', active: true},
+            { name: 'JavaScript', icon: 'js-square', active: true},
             { name: 'Ruby, Java, C++', icon: '', active: false}
           ]
         },
