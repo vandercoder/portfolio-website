@@ -16,9 +16,9 @@
         :href="project.link" target="_blank" rel="noopener noreferrer">
         <div class="relative sm:flex h-auto cursor-pointer transition-opacity duration-300 py-2 hover:opacity-75">
           <transition name="fade">
-          <img 
-            class="w-full h-full sm:w-1/2 background-transparent shadow-lg rounded-lg opacity-75" 
-            v-bind:src="project.image" :alt="project.name">
+            <img 
+              class="w-full h-full sm:w-1/2 background-transparent shadow-lg rounded-lg opacity-75" 
+              v-bind:src="project.image" :alt="project.name">
           </transition>
           <div class="flex items-center rounded-lg pt-2 pb-4 px-1 sm:px-6">
             <div>
