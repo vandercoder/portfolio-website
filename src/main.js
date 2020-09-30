@@ -8,7 +8,6 @@ import { faGithub, faLinkedin, faPython, faGoodreads, faJsSquare, faVuejs, faCss
 import { faEnvelope, faFileCode, faStickyNote, faQuestionCircle } from '@fortawesome/free-regular-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import router from './router'
 
 library.add(
   faHome, faChevronDown, faChevronUp, faChevronLeft, 
@@ -20,6 +19,5 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app')
