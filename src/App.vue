@@ -13,7 +13,7 @@
       v-bind:class="{'opacity-50': activeOverlay}"
     >
       <transition name="fade" mode="out-in">
-        <component :is="currentPage" v-on:go-to-page="changePage"></component>
+        <component :is="currentPage"></component>
       </transition>
     </div>
   </section>

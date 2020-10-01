@@ -17,12 +17,12 @@
       For more on the technologies that I've used, check out my 
       <span 
         class="hvr-bounce-to-top cursor-pointer pb-1" 
-        v-on:click='$emit("go-to-page", "Stacks")'>
+        v-on:click="$store.commit('changePage', 'PageStacks');">
         stacks</span>. 
       You can also check out some of my works on my 
       <span 
         class="hvr-bounce-to-top cursor-pointer pb-1"
-        v-on:click='$emit("go-to-page", "Portfolio")'>
+        v-on:click="$store.commit('changePage', 'PagePortfolio');">
         portfolio</span>. 
     </p>
     <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">

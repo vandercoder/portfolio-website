@@ -53,7 +53,7 @@ export default {
         },
         {
           id: 2,
-          area: "Front-End Web Development",
+          area: "Front-End Webdev",
           stacks: [
             { name: 'Vue.js', icon: 'vuejs', active: true},
             { name: 'TailwindCSS', icon: 'css3-alt', active: true},
@@ -62,7 +62,7 @@ export default {
         },
         {
           id: 3,
-          area: "Back-End Web Development",
+          area: "Back-End Webdev",
           stacks: [
             { name: 'Ruby on Rails', icon: '', active: true},
             { name: 'Django', icon: '', active: true},

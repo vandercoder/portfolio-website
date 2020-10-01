@@ -3,7 +3,7 @@
     <div class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-8">
       <div 
         v-bind:class="{'opacity-0' : currentPage=='PageHome'}"
-        v-on:click="changePage('PageHome')"
+        v-on:click="changePage('Home')"
       >
         <font-awesome-icon :icon="['fas', 'chevron-left']" fixed-width>
         </font-awesome-icon>
