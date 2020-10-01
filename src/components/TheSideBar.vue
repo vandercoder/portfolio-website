@@ -3,7 +3,7 @@
     <div class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-8">
       <div 
         v-bind:class="{'opacity-0' : currentPage=='PageHome'}"
-        v-on:click="$emit('change-page', 'Home')"
+        v-on:click="changePage('PageHome')"
       >
         <font-awesome-icon :icon="['fas', 'chevron-left']" fixed-width>
         </font-awesome-icon>
@@ -25,7 +25,7 @@
         class="block mt-4 px-8 font-semibold transition-all duration-300 hover:opacity-75 cursor-pointer"
         v-for="page in pages"
         :key="page.id"
-        v-on:click="$emit('change-page', page.name)"
+        v-on:click="changePage(page.name)"
         v-bind:class="{ 'text-red-pink' : isActivePage(page) }"
       >
       <font-awesome-icon :icon="[getIconFamily(page), getIconName(page)]" fixed-width>
@@ -68,6 +68,10 @@ export default {
     }
   },
   methods: {
+    changePage: function(pageName) {      
+      let page = "Page" + pageName;
+      this.$store.commit('changePage', page);
+    },
     isActivePage: function(page) {
       let pageName = "Page" + page.name;
       let active = false;

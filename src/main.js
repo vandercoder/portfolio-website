@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+
+import 'es6-promise/auto'
 import './assets/tailwind.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'

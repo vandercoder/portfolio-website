@@ -4,7 +4,6 @@
       class="lg:flex px-10 py-16 font-montserrat text-white leading-relaxed"
     >
     <TheSideBar 
-      v-on:change-page="changePage" 
       v-on:sidebar-active="activeOverlay = !activeOverlay"
       :currentPage="currentPage"
     />
@@ -22,6 +21,7 @@
 </template>
 
 <script>
+import { store } from './store/store'
 import TheSideBar from './components/TheSideBar.vue';
 
 import PageHome from './pages/PageHome.vue';
@@ -31,21 +31,29 @@ import PageQuestions from './pages/PageQuestions.vue';
 
 export default {
   name: 'App',
+  store,
   components: {
     TheSideBar, PageHome, PageStacks, PagePortfolio, PageQuestions
   },
   data () {
     return {
       activeOverlay: false,
-      currentPage: "PageHome",
+      // currentPage: "PageHome", -> without vuex
     }
   },
-  methods: {
-    changePage: function(pageName) {
-      console.log(pageName);
-      this.currentPage = "Page" + pageName;
-    },
-  }
+  computed: {
+    currentPage: function() {
+      return this.$store.state.currentPage;
+    }
+  },
+  // methods: {
+  //   changePage: function(pageName) {
+  //     // this.currentPage = "Page" + pageName; -> without vuex
+      
+  //     let page = "Page" + pageName;
+  //     this.$store.commit('changePage', page);
+  //   },
+  // },
 }
 </script>
 
