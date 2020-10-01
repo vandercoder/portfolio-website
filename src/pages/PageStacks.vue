@@ -7,7 +7,7 @@
       <div class="text-lg sm:text-xl text-gray-300 font-thin tracking-wide">
         Technologies that I use
       </div>
-      <hr class="border-2 opacity-75 my-4">
+      <TheLine/>
     </div>
 
     <div id="content">
@@ -37,8 +37,14 @@
 </template>
 
 <script>
+import TheLine from '../components/TheLine.vue';
+
+
 export default {
   name: 'PageStacks',
+  components: {
+    TheLine
+  },
   data () {
     return {
       fields: [

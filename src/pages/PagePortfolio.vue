@@ -7,7 +7,7 @@
       <p class="text-lg sm:text-xl text-gray-300 font-thin tracking-wide">
         Web design projects
       </p>
-      <hr class="border-2 opacity-75 my-4 ">
+      <TheLine/>
     </div>
 
     <div id="content">
@@ -42,11 +42,15 @@
 </template>
 
 <script>
+import TheLine from '../components/TheLine.vue';
 import CleanprofImage from '../assets/cleanprof-web.png'
 import TemanGaweImage from '../assets/temangawe-web.png'
 
 export default {
   name: 'PagePortfolio',
+  components: {
+    TheLine
+  },
   data () {
     return {
       projects: [

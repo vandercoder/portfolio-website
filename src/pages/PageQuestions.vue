@@ -7,7 +7,7 @@
       <p class="text-lg sm:text-xl text-gray-300 font-thin tracking-wide">
         Not frequently asked per se, but I have had people ask these questions.
       </p>
-      <hr class="border-2 opacity-75 my-4 ">
+      <TheLine/>
     </div>
 
     <div id="content">
@@ -36,8 +36,13 @@
 </template>
 
 <script>
+import TheLine from '../components/TheLine.vue';
+
 export default {
   name: 'PageQuestions',
+  components: {
+    TheLine
+  },
   data () {
     return {
       questions: [

@@ -71,6 +71,7 @@ export default {
     changePage: function(pageName) {      
       let page = "Page" + pageName;
       this.$store.commit('changePage', page);
+      this.openSideBar = false;
     },
     isActivePage: function(page) {
       let pageName = "Page" + page.name;
