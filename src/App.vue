@@ -3,14 +3,11 @@
     <section 
       class="lg:flex px-10 py-16 font-montserrat text-white leading-relaxed"
     >
-    <TheSideBar 
-      v-on:sidebar-active="activeOverlay = !activeOverlay"
-      :currentPage="currentPage"
-    />
+    <TheSideBar :currentPage="currentPage"/>
     
     <div 
       id="content" class="lg:pl-32 lg:w-1/2 transition-opacity duration-300 lg:opacity-100"
-      v-bind:class="{'opacity-50': activeOverlay}"
+      v-bind:class="{'opacity-50': $store.state.activeSidebar}"
     >
       <transition name="fade" mode="out-in">
         <component :is="currentPage"></component>
@@ -38,22 +35,16 @@ export default {
   data () {
     return {
       activeOverlay: false,
-      // currentPage: "PageHome", -> without vuex
     }
   },
   computed: {
     currentPage: function() {
       return this.$store.state.currentPage;
+    },
+    activeSidebar: function() {
+      return this.$store.state.activeSidebar;
     }
   },
-  // methods: {
-  //   changePage: function(pageName) {
-  //     // this.currentPage = "Page" + pageName; -> without vuex
-      
-  //     let page = "Page" + pageName;
-  //     this.$store.commit('changePage', page);
-  //   },
-  // },
 }
 </script>
 

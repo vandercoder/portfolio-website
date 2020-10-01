@@ -8,7 +8,9 @@
         <font-awesome-icon :icon="['fas', 'chevron-left']" fixed-width>
         </font-awesome-icon>
       </div>
-      <div class="cursor-pointer" v-on:click="toggleSideBar" v-bind:class="{'active' : openSideBar}">
+      <div class="cursor-pointer" 
+        v-on:click="$store.commit('toggleSidebar')" 
+        v-bind:class="{'active' : $store.state.activeSidebar}">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -18,7 +20,7 @@
     <nav 
       id="menu" 
       class="h-screen transition-width duration-300 fixed z-10 top-0 right-0 text-lg py-32 w-0 font-montserrat shadow-xl bg-black-100 lg:w-1/2 lg:bg-transparent lg:shadow-none lg:block lg:pl-24 lg:flex-grow lg:pt-40"
-      v-bind:class="{ 'w-3/5': openSideBar }"
+      v-bind:class="{ 'w-3/5': $store.state.activeSidebar }"
     >
       <h3 class="text-xl px-8  text-gray-300 font-bold">Menu</h3>
       <div
@@ -42,7 +44,6 @@ export default {
   props: ['currentPage'],
   data () {
     return {
-      openSideBar: false,
       pages: [
         {
           id: 1,
@@ -71,7 +72,7 @@ export default {
     changePage: function(pageName) {      
       let page = "Page" + pageName;
       this.$store.commit('changePage', page);
-      this.openSideBar = false;
+      this.$store.commit('toggleSidebar');
     },
     isActivePage: function(page) {
       let pageName = "Page" + page.name;
@@ -80,10 +81,6 @@ export default {
         active = true;
       }
       return active;
-    },
-    toggleSideBar: function() {
-      this.$emit('sidebar-active');
-      this.openSideBar = !this.openSideBar;
     },
     getIconFamily: function(page){
       return page.icon.split('-')[0];
