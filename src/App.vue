@@ -56,21 +56,30 @@ export default {
   opacity: 0;
 }
 
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all .5s ease;
+.slide-question {
+  transition: all 1s;
 }
-.slide-fade-leave-active {
-  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-  /* position: absolute; */
-}
-.slide-fade-enter, .slide-fade-leave-active
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-10px);
-  opacity: 0;
 
+/* Question slide */
+.slide-fade-answer {
+  transition: all 1s ease;
 }
+
+.slide-fade-enter, .slide-fade-leave-to{
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
+  overflow: hidden;
+}
+
+.slide-fade-enter-to, .slide-fade-leave {
+  max-height: 200px;
+}
+
+.slide-fade-active {
+  position: absolute;
+}
+
 
 /* Bounce To Top */
 .hvr-bounce-to-top {

@@ -2,6 +2,7 @@
   <div>
     <div class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-8">
       <div 
+        class = "pl-2"
         v-bind:class="{'opacity-0' : currentPage=='PageHome'}"
         v-on:click="changePage('Home')"
       >
@@ -27,7 +28,7 @@
         class="block mt-4 px-8 font-semibold transition-all duration-300 hover:opacity-75 cursor-pointer"
         v-for="page in pages"
         :key="page.id"
-        v-on:click="changePage(page.name)"
+        v-on:click="changePage(page.name); $store.commit('toggleSidebar');"
         v-bind:class="{ 'text-red-pink' : isActivePage(page) }"
       >
       <font-awesome-icon :icon="[getIconFamily(page), getIconName(page)]" fixed-width>
@@ -72,7 +73,6 @@ export default {
     changePage: function(pageName) {      
       let page = "Page" + pageName;
       this.$store.commit('changePage', page);
-      this.$store.commit('toggleSidebar');
     },
     isActivePage: function(page) {
       let pageName = "Page" + page.name;

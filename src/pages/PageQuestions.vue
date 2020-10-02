@@ -11,26 +11,28 @@
     </div>
 
     <div id="content">
-      <div class="py-4 question-transition" v-for="question in questions" :key="question.id">
-        
-        <div class="flex justify-between items-center cursor-pointer"
-          v-on:click="toggleAnswer(question)">
-          <h2 class="w-11/12 text-lg text-left sm:text-xl font-semibold"
-            v-html="question.ask"></h2>
-          <font-awesome-icon 
-            :icon="['fas', 'chevron-down']" fixed-width
-            class="transition-tranform duration-500"
-            v-bind:class="{ 'transform rotate-180' : question.showAnswer}"
-          ></font-awesome-icon> 
+      <transition-group name="slide">
+        <div class="slide-question py-4" v-for="question in questions" :key="question.id">
+          
+          <div class="flex justify-between items-center cursor-pointer"
+            v-on:click="toggleAnswer(question)">
+            <h2 class="w-11/12 text-lg text-left sm:text-xl font-semibold"
+              v-html="question.ask"></h2>
+            <font-awesome-icon 
+              :icon="['fas', 'chevron-down']" fixed-width
+              class="transition-tranform duration-500"
+              v-bind:class="{ 'transform rotate-180' : question.showAnswer}"
+            ></font-awesome-icon> 
+          </div>
+
+          <transition name="slide-fade">
+            <p class="slide-fade-answer text-lg sm:text-xl text-gray-300 font-light tracking-wide py-2"
+              v-html="question.answer" key="question.id" v-show="question.showAnswer">
+            </p>
+          </transition>
+
         </div>
-
-        <transition name="slide-fade">
-          <p class="text-lg sm:text-xl text-gray-300 font-light tracking-wide py-2"
-            v-html="question.answer" v-show="question.showAnswer">
-          </p>
-        </transition>
-
-      </div>
+      </transition-group>
     </div>
   </div>
 </template>
@@ -105,7 +107,7 @@ export default {
     transform: rotate(180);
   }
 
-  .question-transition {
+  /* .question-transition {
     transition: all .5s ease-in-out;
-  }
+  } */
 </style>
