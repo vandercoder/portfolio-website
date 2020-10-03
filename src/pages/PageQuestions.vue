@@ -12,7 +12,7 @@
 
     <div id="content">
       <transition-group name="slide">
-        <div class="slide-question py-4" v-for="question in questions" :key="question.id">
+        <div class="slide-question relative py-4" v-for="question in questions" :key="question.id">
           
           <div class="flex justify-between items-center cursor-pointer"
             v-on:click="toggleAnswer(question)">

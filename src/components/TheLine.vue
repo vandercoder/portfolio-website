@@ -9,7 +9,7 @@ export default {
 </script>
 
 <style scoped>
-  @keyframes slideInFromLeft {
+  @keyframes growLine {
     0% {
       transform: scalex(0);
     }
@@ -19,7 +19,7 @@ export default {
   }
 
   .line {
-    animation: 0.7s ease-in-out 0s 1 slideInFromLeft;
+    animation: 0.7s ease-in-out 0.2s 1 growLine;
     transform-origin: left;
   }
 </style>

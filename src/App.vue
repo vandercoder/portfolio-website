@@ -68,18 +68,11 @@ export default {
 .slide-fade-enter, .slide-fade-leave-to{
   opacity: 0;
   transform: translateY(-10px);
-  max-height: 0;
-  overflow: hidden;
 }
 
-.slide-fade-enter-to, .slide-fade-leave {
-  max-height: 200px;
-}
-
-.slide-fade-active {
+.slide-fade-leave-active {
   position: absolute;
 }
-
 
 /* Bounce To Top */
 .hvr-bounce-to-top {
