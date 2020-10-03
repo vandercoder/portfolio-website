@@ -62,7 +62,7 @@ export default {
 
 /* Question slide */
 .slide-fade-answer {
-  transition: all 1s ease;
+  transition: all 0.8s ease;
 }
 
 .slide-fade-enter, .slide-fade-leave-to{
