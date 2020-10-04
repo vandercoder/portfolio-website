@@ -9,17 +9,21 @@ export default {
 </script>
 
 <style scoped>
-  @keyframes growLine {
-    0% {
-      transform: scalex(0);
-    }
-    100% {
-      transform: scaleX(100%);
-    }
+  .line {
+    -webkit-animation: 0.8s 0s 1 ease-in-out growLine;
+            animation: 0.8s 0s 1 ease-in-out growLine;
+    -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+            transform-origin: left;
   }
 
-  .line {
-    animation: 0.8s ease-in-out 0s 1 growLine;
-    transform-origin: left;
+  @-webkit-keyframes growLine {
+    0% { width: 0%; }
+    100% { width: 100%; }
   }
+  @keyframes growLine {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+
 </style>

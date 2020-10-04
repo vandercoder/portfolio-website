@@ -15,11 +15,14 @@
         v-for="project in projects" :key="project.id" 
         :href="project.link" target="_blank" rel="noopener noreferrer">
         <div class="relative sm:flex h-auto cursor-pointer transition-opacity duration-300 py-2 hover:opacity-75">
-          <transition appear>
-            <img 
-              class="w-full h-full sm:w-1/2 background-transparent shadow-lg rounded-lg opacity-75" 
-              v-bind:src="project.image" :alt="project.name">
-          </transition>
+            <div class="sm:w-1/2">
+              <transition appear>
+                <img 
+                  class="w-full h-full background-transparent shadow-lg rounded-lg opacity-75" 
+                  v-bind:src="project.image" :alt="project.name" v-on:load="loadedImage(project)"
+                >
+              </transition>
+            </div>
           <div class="flex items-center rounded-lg pt-2 pb-4 px-1 sm:px-6">
             <div>
               <p class="text-base sm:text-lg font-semibold text-white"> {{ project.name }}
@@ -60,6 +63,7 @@ export default {
           desc: "Retailer Website | 2020",
           link: "https://www.cleanprof.id/",
           image: CleanprofImage,
+          imageLoaded: false,
         },
         {
           id: 2,
@@ -67,9 +71,31 @@ export default {
           desc: "Coffe Shop Website | 2020",
           link: "https://www.temangawe.com/",
           image: TemanGaweImage,
+          imageLoaded: false,
         },
       ]
+    }
+  },
+  methods: {
+    loadedImage: function(project) {
+      project.imageLoaded = true;
     }
   }
 }
 </script>
+
+<style scoped>
+.fade-image-enter-active {
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-image-enter {
+  opacity: 0;
+}
+
+.fade-image-enter-to {
+  opacity: 1;
+}
+
+
+</style>
