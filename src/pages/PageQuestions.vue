@@ -107,7 +107,22 @@ export default {
     transform: rotate(180);
   }
 
-  /* .question-transition {
-    transition: all .5s ease-in-out;
-  } */
+  .slide-question {
+  transition: all 1s;
+}
+
+  /* Question slide */
+  .slide-fade-answer {
+    transition: all 0.8s ease;
+  }
+
+  .slide-fade-enter, .slide-fade-leave-to{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .slide-fade-leave-active {
+    position: absolute;
+  }
+
 </style>

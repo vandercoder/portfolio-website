@@ -19,7 +19,7 @@ export default {
   }
 
   .line {
-    animation: 1s ease-in-out 0s 1 growLine;
+    animation: 0.8s ease-in-out 0s 1 growLine;
     transform-origin: left;
   }
 </style>
