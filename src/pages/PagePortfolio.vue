@@ -14,7 +14,7 @@
       <a 
         v-for="project in projects" :key="project.id" 
         :href="project.link" target="_blank" rel="noopener noreferrer">
-        <div class="relative sm:flex h-auto cursor-pointer transition-opacity duration-300 py-2 hover:opacity-75">
+        <div class="relative sm:flex h-auto py-2 cursor-pointer transition duration-300 transform hover:opacity-75 hover:-translate-y-1">
             <div class="sm:w-1/2">
               <transition appear>
                 <img 

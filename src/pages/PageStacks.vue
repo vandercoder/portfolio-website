@@ -11,7 +11,7 @@
     </div>
 
     <div id="content">
-      <div class="relative cursor-pointer" v-for="(field, fieldIndex) in fields" :key="field.id"
+      <div class="relative" v-for="(field, fieldIndex) in fields" :key="field.id"
         v-on:click="toggleInfo(field.id)"
       >
         <h2 class="text-xl text-left sm:text-2xl font-semibold"
@@ -20,12 +20,12 @@
           {{ field.area }}
         </h2>
 
-        <transition name="fade-show">
-          <p class="fade-show-info text-base sm:text-lg z-10 text-gray-400 absolute p-4 my-2 leading-relaxed rounded-lg bg-black-100 border-t-2 border-gray-600"
+        <!-- <transition name="fade-show">
+          <p class="fade-show-info text-sm sm:text-base font- z-10 text-gray-400 absolute p-4 my-2 leading-relaxed rounded-lg bg-black-100 border-t-2 border-gray-600"
             v-show="field.id === activeInfo" v-html="field.info"
           >
           </p>
-        </transition>
+        </transition> -->
 
         <p class="sm:inline-block text-lg sm:text-xl text-gray-400 tracking-wide mt-2 sm:mt-2"
           v-for="(stack, stackIndex) in field.stacks" :key="stack.name"
@@ -33,7 +33,7 @@
         >
           <font-awesome-icon :icon="['fab', stack.icon]" fixed-width
           v-if=stack.icon>
-          </font-awesome-icon> 
+          </font-awesome-icon>
           {{ stack.name }}
         </p>
       </div>
@@ -42,7 +42,7 @@
     <div class="text-sm text-right text-gray-300 mt-4"> 
       <div class="bg-gray-400 h-2 w-2 inline-block"></div> in touch 
       <div class="bg-gray-400 h-2 w-2 inline-block opacity-25 ml-2"></div> not in touch
-      <div>click to know more</div>
+      <!-- <div>click to know more</div> -->
     </div>
     
   </div>

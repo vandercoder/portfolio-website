@@ -29,23 +29,40 @@
       Besides programming and helping around the house, I spend my time reading books 
       (no really), running, and learning the guitar. 
     </p>
-    <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
-      Find me on
-      <a 
-        target="_blank" rel="noopener noreferrer" 
-        href="https://github.com/andikawilliam" 
-        class="mr-1">
-        <font-awesome-icon :icon="['fab', 'github']" fixed-width>
-        </font-awesome-icon>
-      </a>
-      <a 
-        target="_blank" rel="noopener noreferrer" 
-        href="https://www.linkedin.com/in/andika-william-62777314a/"
-        class="mr-2">
-        <font-awesome-icon :icon="['fab', 'linkedin']" fixed-width>
-        </font-awesome-icon>
-      </a>
-    </p>
+    <div class="flex justify-between text-sm sm:text-lg text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
+      <p class="transition duration-300 transform hover:-translate-y-2">
+        <a 
+          target="_blank" rel="noopener noreferrer" 
+          href="mailto:andikawilliam@outlook.com" 
+          class="mr-1">
+          Contact Me
+          <font-awesome-icon :icon="['far', 'envelope']" fixed-width>
+          </font-awesome-icon>
+        </a>
+      </p>
+
+      <p>
+        <a 
+          target="_blank" rel="noopener noreferrer" 
+          href="https://github.com/andikawilliam" 
+          class="mr-1">
+          <font-awesome-icon :icon="['fab', 'github']" fixed-width
+            class="transition duration-300 transform hover:scale-105 hover:-translate-y-2"
+          >
+          </font-awesome-icon>
+        </a>
+        <a 
+          target="_blank" rel="noopener noreferrer" 
+          href="https://www.linkedin.com/in/andika-william-62777314a/"
+        >
+          <font-awesome-icon :icon="['fab', 'linkedin']" fixed-width
+            class="transition duration-300 transform hover:scale-105 hover:-translate-y-2"
+          >
+          </font-awesome-icon>
+        </a>
+      </p>
+    </div>
+    
   </div>
 </template>
 

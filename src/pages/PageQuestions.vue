@@ -91,13 +91,6 @@ export default {
     toggleAnswer: function(question) {
       question.showAnswer = !question.showAnswer
     },
-    toggleArrow: function(showAnswer) {
-      let arrowState = 'chevron-down'
-      if (showAnswer) {
-         arrowState = 'chevron-up';
-      }
-      return arrowState;
-    }
   },
 }
 </script>
@@ -108,8 +101,8 @@ export default {
   }
 
   .slide-question {
-  transition: all 1s;
-}
+    transition: all 1s;
+  }
 
   /* Question slide */
   .slide-fade-answer {
