@@ -10,8 +10,6 @@
       I'm a Web Developer from Jakarta with experience in writing 
       <span class="font-semibold"> Python </span> / <span class="font-semibold">Javascript</span> 
       and using <span class="font-semibold">Vue.js</span>. 
-      Also I'm a former QA Engineer who worked on test automation using 
-      <span class="font-semibold">Appium</span> / <span class="font-semibold">Selenium</span>. 
     </p>
     <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
       For more on the technologies that I've used, check out my 
@@ -45,8 +43,8 @@
         <a 
           target="_blank" rel="noopener noreferrer" 
           href="https://github.com/andikawilliam" 
-          class="mr-1">
-          <font-awesome-icon :icon="['fab', 'github']" fixed-width
+          class="mr-2">
+          <font-awesome-icon :icon="['fab', 'github']" size='lg' fixed-width
             class="transition duration-300 transform hover:scale-105 hover:-translate-y-2"
           >
           </font-awesome-icon>
@@ -55,7 +53,7 @@
           target="_blank" rel="noopener noreferrer" 
           href="https://www.linkedin.com/in/andika-william-62777314a/"
         >
-          <font-awesome-icon :icon="['fab', 'linkedin']" fixed-width
+          <font-awesome-icon :icon="['fab', 'linkedin']" size='lg' fixed-width
             class="transition duration-300 transform hover:scale-105 hover:-translate-y-2"
           >
           </font-awesome-icon>

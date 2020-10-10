@@ -19,9 +19,9 @@
         >
           {{ field.area }}
         </h2>
-
-        <!-- <transition name="fade-show">
-          <p class="fade-show-info text-sm sm:text-base font- z-10 text-gray-400 absolute p-4 my-2 leading-relaxed rounded-lg bg-black-100 border-t-2 border-gray-600"
+<!-- 
+        <transition name="fade-show">
+          <p class="fade-show-info text-sm sm:text-base font- z-10 text-gray-400 absolute p-4 my-2 leading-relaxed rounded-lg bg-black-100 border-l-2 border-gray-600"
             v-show="field.id === activeInfo" v-html="field.info"
           >
           </p>
@@ -69,10 +69,8 @@ export default {
             { name: 'JavaScript', icon: 'js-square', active: true},
             { name: 'Ruby, Java, C++', icon: '', active: false}
           ],
-          info: `Generally, I like to write my programs in Python. Javascript I used
-          strictly for web. <br><br> 
-          On the other hand, I only use Ruby for Ruby on Rails.
-          While Java and C++, I haven't really used in a while.`,
+          info: `Sample projects:
+          `,
           showInfo: false,
         },
         {
