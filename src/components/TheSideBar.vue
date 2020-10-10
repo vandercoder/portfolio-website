@@ -31,7 +31,7 @@
         v-on:click="changePage(page.name); $store.commit('toggleSidebar');"
         v-bind:class="{ 
           'text-red-pink' : isActivePage(page),
-          'opacity-0': !$store.state.activeSidebar,
+          'opacity-0 lg:opacity-100': !$store.state.activeSidebar,
         }"
       >
       <font-awesome-icon :icon="[getIconFamily(page), getIconName(page)]" fixed-width>
