@@ -24,8 +24,9 @@
         portfolio</span>. 
     </p>
     <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
-      Besides programming and helping around the house, I spend my time reading books 
-      (no really), running, and learning the guitar. 
+      Besides programming and helping around the house, I spend my time reading 
+      <span class="italic">books, running, </span> and
+      <span class="italic">learning the guitar.</span> 
     </p>
     <div class="flex justify-between text-sm sm:text-lg text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
       <p class="transition duration-300 transform hover:-translate-y-2">

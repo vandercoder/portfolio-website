@@ -12,25 +12,34 @@
 
     <div id="content">
       <transition-group name="slide">
-        <div class="slide-question relative py-4" v-for="question in questions" :key="question.id">
+        <div 
+          class="slide-question relative py-4"
+          v-for="question in questions" 
+          :key="question.id">
           
-          <div class="flex justify-between items-center cursor-pointer"
-            v-on:click="toggleAnswer(question)">
-            <h2 class="w-11/12 text-lg text-left sm:text-xl font-semibold"
-              v-html="question.ask"></h2>
+          <div 
+            class="flex justify-between items-center cursor-pointer"
+            v-on:click="toggleAnswer(question)"
+          >
+            <h2 
+              class="w-11/12 text-lg text-left sm:text-xl font-semibold"
+              v-html="question.ask"
+            >
+            </h2>
             <font-awesome-icon 
               :icon="['fas', 'chevron-down']" fixed-width
               class="transition-tranform duration-500"
               v-bind:class="{ 'transform rotate-180' : question.showAnswer}"
-            ></font-awesome-icon> 
+            >
+            </font-awesome-icon> 
           </div>
-
           <transition name="slide-fade">
             <p class="slide-fade-answer text-lg sm:text-xl text-gray-300 font-light tracking-wide py-2"
-              v-html="question.answer" key="question.id" v-show="question.showAnswer">
+              v-html="question.answer" 
+              :key="question.id" 
+              v-show="question.showAnswer">
             </p>
           </transition>
-
         </div>
       </transition-group>
     </div>
@@ -70,9 +79,8 @@ export default {
         },
         { 
           id: 4,
-          ask: `"So you like reading? Isn't that like everyone's fake hobby? 
-              You know like travelling or hiking.."`,
-          answer: `Yeah, but it is what it is. Check out my 
+          ask: `"What books do you like to read?"`,
+          answer: `Check out my 
               <a href="https://www.goodreads.com/andiwilliam" 
               class="hvr-bounce-to-top">goodreads</a>, 
               maybe we have some common book interests.`,
@@ -96,6 +104,11 @@ export default {
 </script>
 
 <style scoped>
+  .video-slider {
+    overflow: hidden;
+    position: relative;
+  }
+
   .arrow-show {
     transform: rotate(180);
   }

@@ -46,8 +46,9 @@
 
 <script>
 import TheLine from '../components/TheLine.vue';
-import CleanprofImage from '../assets/cleanprof-web.png'
+import CleanprofImage from '../assets/cleanprof-web-2.png'
 import TemanGaweImage from '../assets/temangawe-web.png'
+import DitoBuwonoImage from '../assets/ditobuwono-web.png'
 
 export default {
   name: 'PagePortfolio',
@@ -68,9 +69,17 @@ export default {
         {
           id: 2,
           name: "TemanGawe.com",
-          desc: "Coffe Shop Website | 2020",
+          desc: "Coffee Shop Website | 2020",
           link: "https://www.temangawe.com/",
           image: TemanGaweImage,
+          imageLoaded: false,
+        },
+        {
+          id: 3,
+          name: "Ditobuwono.com",
+          desc: "Portfolio Website | 2020",
+          link: "https://www.ditobuwono.com/",
+          image: DitoBuwonoImage,
           imageLoaded: false,
         },
       ]
