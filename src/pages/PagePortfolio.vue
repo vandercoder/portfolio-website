@@ -99,7 +99,7 @@ export default {
           link: "https://www.ditobuwono.com/",
           image: DitoBuwonoImage,
           imageLoaded: false,
-          stackIcon: ""
+          stackIcon: "vuejs"
         },
       ]
     }
