@@ -14,7 +14,9 @@
       <a 
         v-for="project in projects" :key="project.id" 
         :href="project.link" target="_blank" rel="noopener noreferrer">
-        <div class="relative sm:flex h-auto py-2 cursor-pointer transition duration-300 transform hover:opacity-75 hover:-translate-y-1">
+        <div
+          class="relative sm:flex h-auto py-2 cursor-pointer transition duration-300 transform hover:opacity-75 hover:-translate-y-1"
+        >
             <div class="sm:w-1/2">
               <transition appear>
                 <img 
@@ -25,8 +27,22 @@
             </div>
           <div class="flex items-center rounded-lg pt-2 pb-4 px-1 sm:px-6">
             <div>
-              <p class="text-base sm:text-lg font-semibold text-white"> {{ project.name }}
-              <p class="text-sm sm:text-base font-light text-gray-300">{{ project.desc }}</p>
+              <p class="text-base sm:text-lg font-semibold text-white">
+                {{ project.name }}
+              </p>
+              <p class="text-sm sm:text-base font-light text-gray-300">
+                {{ project.desc }}
+              </p>
+              <p
+                class="text-sm text-gray-500" 
+                v-if="project.stackIcon">
+                Using
+                <font-awesome-icon 
+                  :icon="['fab', project.stackIcon]" 
+                  fixed-width
+                >
+                </font-awesome-icon>
+              </p>
             </div>
           </div>
         </div>
@@ -65,6 +81,7 @@ export default {
           link: "https://www.cleanprof.id/",
           image: CleanprofImage,
           imageLoaded: false,
+          stackIcon: "vuejs",
         },
         {
           id: 2,
@@ -73,6 +90,7 @@ export default {
           link: "https://www.temangawe.com/",
           image: TemanGaweImage,
           imageLoaded: false,
+          stackIcon: "react",
         },
         {
           id: 3,
@@ -81,6 +99,7 @@ export default {
           link: "https://www.ditobuwono.com/",
           image: DitoBuwonoImage,
           imageLoaded: false,
+          stackIcon: ""
         },
       ]
     }
