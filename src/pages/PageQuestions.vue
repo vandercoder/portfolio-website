@@ -61,7 +61,7 @@ export default {
       questions: [
         { 
           id: 1,
-          ask: `"So uh.. what should I call you?"`,
+          ask: `"So what should I call you?"`,
           answer:`People usually call me <span class="italic">'Dika'</span> in 
           Indonesia. Though it usually doesn't sound good in English. 
           So you can call me <span class="italic">'Andy'</span> as well.`,
@@ -69,12 +69,18 @@ export default {
         },
         { 
           id: 2,
+          ask: `"Are you a self-learned developer or did study CS in a University?"`,
+          answer: `Yes to both. I think most developers learned their stuff outside of Uni.`,
+          showAnswer: false
+        },
+        { 
+          id: 3,
           ask: `"Oh, so which University did you go into?"`,
           answer: `I went to UGM in Yogyakarta, Indonesia.`,
           showAnswer: false
         },
         { 
-          id: 3,
+          id: 4,
           ask: `"What books do you like to read?"`,
           answer: `Check out my 
               <a href="https://www.goodreads.com/andiwilliam" 
@@ -83,7 +89,7 @@ export default {
           showAnswer: false,
         },
         { 
-          id: 4,
+          id: 5,
           ask: `"Can you hack Facebook?"`,
           answer: `No..`,
           showAnswer: false
