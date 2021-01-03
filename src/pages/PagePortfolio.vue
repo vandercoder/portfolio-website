@@ -13,7 +13,8 @@
     <div id="content">
       <a 
         v-for="project in projects" :key="project.id" 
-        :href="project.link" target="_blank" rel="noopener noreferrer">
+        v-bind:href="project.link" target="_blank" rel="noopener noreferrer"
+      >
         <div
           class="relative sm:flex h-auto py-2 cursor-pointer transition duration-300 transform hover:opacity-75 hover:-translate-y-1"
         >
@@ -21,7 +22,9 @@
               <transition appear>
                 <img 
                   class="w-full h-full background-transparent shadow-lg rounded-lg opacity-75" 
-                  v-bind:src="project.image" :alt="project.name" v-on:load="loadedImage(project)"
+                  v-bind:src="project.image"
+                  v-bind:alt="project.name"
+                  v-on:load="loadedImage(project)"
                 >
               </transition>
             </div>
@@ -36,9 +39,9 @@
               <p
                 class="text-sm text-gray-500" 
                 v-if="project.stackIcon">
-                Using
+                Made with 
                 <font-awesome-icon 
-                  :icon="['fab', project.stackIcon]" 
+                  v-bind:icon="['fab', project.stackIcon]" 
                   fixed-width
                 >
                 </font-awesome-icon>

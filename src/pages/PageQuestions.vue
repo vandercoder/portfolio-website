@@ -15,7 +15,7 @@
         <div 
           class="slide-question relative py-4"
           v-for="question in questions" 
-          :key="question.id">
+          v-bind:key="question.id">
           
           <div 
             class="flex justify-between items-center cursor-pointer"
@@ -27,17 +27,19 @@
             >
             </h2>
             <font-awesome-icon 
-              :icon="['fas', 'chevron-down']" fixed-width
+              v-bind:icon="['fas', 'chevron-down']" fixed-width
               class="transition-tranform duration-500"
               v-bind:class="{ 'transform rotate-180' : question.showAnswer}"
             >
             </font-awesome-icon> 
           </div>
           <transition name="slide-fade">
-            <p class="slide-fade-answer text-lg sm:text-xl text-gray-300 font-light tracking-wide py-2"
+            <p
+              class="slide-fade-answer text-lg sm:text-xl text-gray-300 font-light tracking-wide py-2"
               v-html="question.answer" 
-              :key="question.id" 
-              v-show="question.showAnswer">
+              v-bind:key="question.id" 
+              v-show="question.showAnswer"
+            >
             </p>
           </transition>
         </div>
@@ -67,18 +69,12 @@ export default {
         },
         { 
           id: 2,
-          ask: `"Are you a self-learned developer or did study CS in a University?"`,
-          answer: `Yes to both. I think most developers learned their stuff outside of Uni.`,
-          showAnswer: false
-        },
-        { 
-          id: 3,
           ask: `"Oh, so which University did you go into?"`,
           answer: `I went to UGM in Yogyakarta, Indonesia.`,
           showAnswer: false
         },
         { 
-          id: 4,
+          id: 3,
           ask: `"What books do you like to read?"`,
           answer: `Check out my 
               <a href="https://www.goodreads.com/andiwilliam" 
@@ -87,7 +83,7 @@ export default {
           showAnswer: false,
         },
         { 
-          id: 5,
+          id: 4,
           ask: `"Can you hack Facebook?"`,
           answer: `No..`,
           showAnswer: false

@@ -11,20 +11,24 @@
     </div>
 
     <div id="content">
-      <div class="relative" v-for="(field, fieldIndex) in fields" :key="field.id"
+      <div
+        class="relative"
+        v-for="(field, fieldIndex) in fields" :key="field.id"
         v-on:click="toggleInfo(field.id)"
       >
-        <h2 class="text-xl text-left sm:text-2xl font-semibold"
+        <h2
+          class="text-xl text-left sm:text-2xl font-semibold"
           v-bind:class="{ 'mt-10':fieldIndex !== 0}"
         >
           {{ field.area }}
         </h2>
-        <p class="sm:inline-block text-lg sm:text-xl text-gray-400 tracking-wide mt-2 sm:mt-2"
+        <p 
+          class="sm:inline-block text-lg sm:text-xl text-gray-400 tracking-wide mt-2 sm:mt-2"
           v-for="(stack, stackIndex) in field.stacks" :key="stack.name"
           v-bind:class="{ 'sm:pl-12':stackIndex !== 0, 'opacity-25':!stack.active}"
         >
           <font-awesome-icon 
-            :icon="['fab', stack.icon]" fixed-width
+            v-bind:icon="['fab', stack.icon]" fixed-width
             v-if=stack.icon
           >
           </font-awesome-icon>
@@ -36,7 +40,6 @@
     <div class="text-sm text-right text-gray-300 mt-4"> 
       <div class="bg-gray-400 h-2 w-2 inline-block"></div> in touch 
       <div class="bg-gray-400 h-2 w-2 inline-block opacity-25 ml-2"></div> not in touch
-      <!-- <div>click to know more</div> -->
     </div>
     
   </div>

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-8">
+    <div
+      class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-8"
+    >
       <div 
         class = "pl-2"
         v-bind:class="{'opacity-0' : currentPage=='PageHome'}"
@@ -9,9 +11,11 @@
         <font-awesome-icon :icon="['fas', 'chevron-left']" fixed-width>
         </font-awesome-icon>
       </div>
-      <div class="cursor-pointer" 
+      <div 
+        class="cursor-pointer" 
         v-on:click="$store.commit('toggleSidebar')" 
-        v-bind:class="{'active' : $store.state.activeSidebar}">
+        v-bind:class="{'active' : $store.state.activeSidebar}"
+      >
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -23,18 +27,23 @@
       class="overflow-hidden whitespace-no-wrap h-screen transition-width duration-500 fixed z-10 top-0 right-0 text-lg py-32 w-0 font-montserrat shadow-xl bg-black-100 lg:w-1/2 lg:bg-transparent lg:shadow-none lg:block lg:pl-24 lg:flex-grow lg:pt-40"
       v-bind:class="{ 'w-3/5': $store.state.activeSidebar }"
     >
-      <h3 class="text-xl px-8 text-gray-300 font-bold">Menu</h3>
+      <h3 class="text-xl px-8 text-gray-300 font-bold">
+        Menu
+      </h3>
       <div
         class="block mt-4 px-8 font-light transition-all duration-500 hover:opacity-75 transform hover:-translate-y-1 cursor-pointer"
         v-for="page in pages"
-        :key="page.id"
+        v-bind:key="page.id"
         v-on:click="changePage(page.name); $store.commit('toggleSidebar');"
         v-bind:class="{ 
           'text-red-pink' : isActivePage(page),
           'opacity-0 lg:opacity-100': !$store.state.activeSidebar,
         }"
       >
-      <font-awesome-icon :icon="[getIconFamily(page), getIconName(page)]" fixed-width>
+      <font-awesome-icon
+        :icon="[getIconFamily(page), getIconName(page)]"
+        fixed-width
+      >
       </font-awesome-icon>
       {{ page.name }}
       </div>
