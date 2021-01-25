@@ -51,14 +51,15 @@
         </div>
       </a>
     </div>
-
-    <div class="text-base sm:text-lg text-gray-300 mt-4">
-      "Wait this is it?" 
+    <div class="pt-4">
+      Looking to build a website ?
       <a 
-        class="hvr-bounce-to-top" 
         target="_blank" rel="noopener noreferrer" 
-        href="https://andikawilliam.github.io/"
-      >Old portfolio</a>
+        href="mailto:andikawilliam@outlook.com" 
+        class="hvr-bounce-to-top mr-1"
+      >
+        Let's chat
+      </a>
     </div>
   </div>
 </template>

@@ -2,7 +2,7 @@
   <div>
     <div id="header">
       <h1 class="text-4xl text-left sm:text-5xl font-semibold">
-        My Stacks
+        Tech Stacks
       </h1>
       <div class="text-lg sm:text-xl text-gray-300 font-thin tracking-wide">
         What I use for work
@@ -36,12 +36,6 @@
         </p>
       </div>
     </div>
-
-    <div class="text-sm text-right text-gray-300 mt-4"> 
-      <div class="bg-gray-400 h-2 w-2 inline-block"></div> in touch 
-      <div class="bg-gray-400 h-2 w-2 inline-block opacity-25 ml-2"></div> not in touch
-    </div>
-    
   </div>
 </template>
 
@@ -64,7 +58,6 @@ export default {
           stacks: [
             { name: 'Python', icon: 'python', active: true},
             { name: 'JavaScript', icon: 'js-square', active: true},
-            { name: 'Ruby, Java, C++', icon: '', active: false}
           ],
           info: `Sample projects:
           `,
@@ -93,7 +86,6 @@ export default {
           stacks: [
             { name: 'Ruby on Rails', icon: '', active: true},
             { name: 'Django', icon: '', active: true},
-            { name: 'Flask', icon: '', active: false}
           ],
           info: `Recently, I've been using Ruby on Rails for building
           dynamic websites. I've also used Django since I like to write in Python.`,
@@ -105,7 +97,6 @@ export default {
           stacks: [
             { name: 'Appium', icon: '', active: true},
             { name: 'Selenium', icon: '', active: true},
-            { name: 'Katalon', icon: '', active: false}
           ],
           info: `Used to worked on automating black-box 
           testing using Appium and Selenium. I'm currently learning Jest..`,

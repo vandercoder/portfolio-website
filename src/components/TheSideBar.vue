@@ -24,12 +24,9 @@
     
     <nav 
       id="menu" 
-      class="overflow-hidden whitespace-no-wrap h-screen transition-width duration-500 fixed z-10 top-0 right-0 text-lg py-32 w-0 font-montserrat shadow-xl bg-black-100 lg:w-1/2 lg:bg-transparent lg:shadow-none lg:block lg:pl-24 lg:flex-grow lg:pt-40"
+      class="overflow-hidden whitespace-no-wrap h-screen transition-width duration-500 fixed z-10 top-0 right-0 text-lg py-32 w-0 font-montserrat shadow-xl bg-black-100 bg-opacity-90 lg:w-1/2 lg:bg-transparent lg:shadow-none lg:block lg:pl-24 lg:flex-grow lg:pt-40"
       v-bind:class="{ 'w-3/5': $store.state.activeSidebar }"
     >
-      <h3 class="text-xl px-8 text-gray-300 font-bold">
-        Menu
-      </h3>
       <div
         class="block mt-4 px-8 font-light transition-all duration-500 hover:opacity-75 transform hover:-translate-y-1 cursor-pointer"
         v-for="page in pages"
@@ -40,11 +37,6 @@
           'opacity-0 lg:opacity-100': !$store.state.activeSidebar,
         }"
       >
-      <font-awesome-icon
-        :icon="[getIconFamily(page), getIconName(page)]"
-        fixed-width
-      >
-      </font-awesome-icon>
       {{ page.name }}
       </div>
     </nav>
@@ -60,22 +52,18 @@ export default {
       pages: [
         {
           id: 1,
-          icon: "fas-home",
           name: "Home",
         },
         {
           id: 2,
-          icon: "far-file-code",
           name: "Stacks",
         },
         {
           id: 3,
-          icon: "far-sticky-note",
           name: "Portfolio",
         },
         {
           id: 4,
-          icon: "far-question-circle",
           name: "Questions"
         },
       ]

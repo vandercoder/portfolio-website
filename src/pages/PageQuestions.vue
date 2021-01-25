@@ -2,7 +2,7 @@
   <div>
     <div id="header">
       <h1 class="text-4xl text-left sm:text-5xl font-semibold">
-        Quick Questions
+        FAQ
       </h1>
       <p class="text-lg sm:text-xl text-gray-300 font-thin tracking-wide">
         Not frequently asked per se, but I have had people ask these questions.
@@ -61,23 +61,30 @@ export default {
       questions: [
         { 
           id: 1,
-          ask: `"So what should I call you?"`,
-          answer:`People usually call me <span class="italic">'Dika'</span> in 
-          Indonesia. Though it usually doesn't sound good in English. 
-          So you can call me <span class="italic">'Andy'</span> as well.`,
+          ask: `"What should I call you?"`,
+          answer:`People usually call me <span class="italic">'Dika'</span>.
+          Though it usually doesn't sound good in English. 
+          So <span class="italic">'Andy'</span> works as well.`,
           showAnswer: false
         },
         { 
           id: 2,
-          ask: `"Are you a self-learned developer or did study CS in a University?"`,
-          answer: `Yes to both. I think most developers learned their stuff outside of Uni.`,
+          ask: `"Are you a front-end or back-end developer?"`,
+          answer: `Currently, I'm more focused on the front end side of things.`,
           showAnswer: false
         },
         { 
           id: 3,
-          ask: `"Oh, so which University did you go into?"`,
-          answer: `I went to UGM in Yogyakarta, Indonesia.`,
-          showAnswer: false
+          ask: `"Do you accept web design projects?"`,
+          answer: `Yes,
+          <a 
+            target="_blank" rel="noopener noreferrer" 
+            href="mailto:andikawilliam@outlook.com" 
+            class="hvr-bounce-to-top mr-1"
+          >
+            let's have a chat
+          </a> if you're looking to build one`,
+          showAnswer: false,
         },
         { 
           id: 4,

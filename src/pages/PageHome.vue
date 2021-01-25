@@ -15,13 +15,17 @@
       For more on the technologies that I've used, check out my 
       <span 
         class="hvr-bounce-to-top cursor-pointer pb-1" 
-        v-on:click="$store.commit('changePage', 'PageStacks');">
-        stacks</span>. 
+        v-on:click="$store.commit('changePage', 'PageStacks');"
+      >
+        stacks
+      </span>. 
       You can also check out some of my works on my 
       <span 
         class="hvr-bounce-to-top cursor-pointer pb-1"
-        v-on:click="$store.commit('changePage', 'PagePortfolio');">
-        portfolio</span>. 
+        v-on:click="$store.commit('changePage', 'PagePortfolio');"
+      >
+        portfolio
+      </span>. 
     </p>
     <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
       Besides programming and helping around the house, I spend my time reading 
@@ -34,12 +38,11 @@
           target="_blank" rel="noopener noreferrer" 
           href="mailto:andikawilliam@outlook.com" 
           class="mr-1">
-          Contact Me
+          Say hello
           <font-awesome-icon :icon="['far', 'envelope']" fixed-width>
           </font-awesome-icon>
         </a>
       </p>
-
       <p>
         <a 
           target="_blank" rel="noopener noreferrer" 
@@ -61,14 +64,8 @@
         </a>
       </p>
     </div>
-    
   </div>
 </template>
 
-<script>
-
-</script>
-
-<style>
-
-</style>
+<script></script>
+<style></style>
