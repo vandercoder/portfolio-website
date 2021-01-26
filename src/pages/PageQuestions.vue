@@ -5,7 +5,7 @@
         FAQ
       </h1>
       <p class="text-lg sm:text-xl text-gray-300 font-thin tracking-wide">
-        Not frequently asked per se, but I have had people ask these questions.
+        Quick questions
       </p>
       <TheLine/>
     </div>
