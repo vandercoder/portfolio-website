@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-6"
+      class="absolute flex justify-between w-full lg:hidden top-0 right-0 p-6"
     >
       <div 
         class = ""
@@ -12,7 +12,7 @@
         </font-awesome-icon>
       </div>
       <div 
-        class="cursor-pointer" 
+        class="cursor-pointer z-30" 
         v-on:click="$store.commit('toggleSidebar')" 
         v-bind:class="{'active' : $store.state.activeSidebar}"
       >
@@ -24,7 +24,7 @@
     
     <nav 
       id="menu" 
-      class="overflow-hidden whitespace-no-wrap h-screen transition-width duration-500 fixed z-10 top-0 right-0 text-lg py-32 w-0 font-montserrat shadow-xl bg-black-300 text-center lg:text-left lg:w-1/2 lg:bg-transparent lg:shadow-none lg:block lg:pl-24 lg:flex-grow lg:pt-40"
+      class="overflow-hidden whitespace-no-wrap h-screen transition-width duration-500 fixed z-20 top-0 right-0 text-lg py-32 w-0 font-montserrat shadow-xl bg-black-300 text-center lg:text-left lg:w-1/2 lg:bg-transparent lg:shadow-none lg:block lg:pl-24 lg:flex-grow lg:pt-40"
       v-bind:class="{ 'w-full': $store.state.activeSidebar }"
     >
       <div
