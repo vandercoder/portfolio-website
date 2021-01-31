@@ -1,10 +1,10 @@
 <template>
   <div>
     <div
-      class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-8"
+      class="absolute flex justify-between z-30 w-full lg:hidden top-0 right-0 p-6"
     >
       <div 
-        class = "pl-2"
+        class = ""
         v-bind:class="{'opacity-0' : currentPage=='PageHome'}"
         v-on:click="changePage('Home')"
       >
@@ -24,8 +24,8 @@
     
     <nav 
       id="menu" 
-      class="overflow-hidden whitespace-no-wrap h-screen transition-width duration-500 fixed z-10 top-0 right-0 text-lg py-32 w-0 font-montserrat shadow-xl bg-black-100 bg-opacity-90 lg:w-1/2 lg:bg-transparent lg:shadow-none lg:block lg:pl-24 lg:flex-grow lg:pt-40"
-      v-bind:class="{ 'w-3/5': $store.state.activeSidebar }"
+      class="overflow-hidden whitespace-no-wrap h-screen transition-width duration-500 fixed z-10 top-0 right-0 text-lg py-32 w-0 font-montserrat shadow-xl bg-black-300 text-center lg:text-left lg:w-1/2 lg:bg-transparent lg:shadow-none lg:block lg:pl-24 lg:flex-grow lg:pt-40"
+      v-bind:class="{ 'w-full': $store.state.activeSidebar }"
     >
       <div
         class="block mt-4 px-8 font-light transition-all duration-500 hover:opacity-75 transform hover:-translate-y-1 cursor-pointer"

@@ -7,24 +7,30 @@
       My name is <span class="whitespace-no-wrap">Andika William.</span>
     </h2>
     <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
-      I'm a Web Developer from Jakarta with experience in writing 
-      <span class="font-semibold"> Python </span> / <span class="font-semibold">Javascript</span> 
-      and using <span class="font-semibold">Vue.js</span>. 
+      I'm a Web Developer from Jakarta, Indonesia. If you're looking to build 
+      a website, 
+      <a 
+        target="_blank" rel="noopener noreferrer" 
+        href="mailto:andikawilliam@outlook.com" 
+        class="hvr-bounce-to-top mr-1"
+      > 
+        let's have a chat.
+      </a>
     </p>
     <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
-      For more on the technologies that I've used, check out my 
-      <span 
-        class="hvr-bounce-to-top cursor-pointer pb-1" 
-        v-on:click="$store.commit('changePage', 'PageStacks');"
-      >
-        stacks
-      </span>. 
-      You can also check out some of my works on my 
+      You can check out some of my works on my 
       <span 
         class="hvr-bounce-to-top cursor-pointer pb-1"
         v-on:click="$store.commit('changePage', 'PagePortfolio');"
       >
         portfolio
+      </span>. 
+      For technologies that I've used, have a look at my 
+      <span 
+        class="hvr-bounce-to-top cursor-pointer pb-1" 
+        v-on:click="$store.commit('changePage', 'PageStacks');"
+      >
+        stacks
       </span>. 
     </p>
     <p class="text-base sm:text-xl text-gray-300 font-light tracking-wide mt-6 sm:mt-8">
@@ -37,7 +43,8 @@
         <a 
           target="_blank" rel="noopener noreferrer" 
           href="mailto:andikawilliam@outlook.com" 
-          class="mr-1">
+          class="mr-1"
+        >
           Say hello
           <font-awesome-icon :icon="['far', 'envelope']" fixed-width>
           </font-awesome-icon>

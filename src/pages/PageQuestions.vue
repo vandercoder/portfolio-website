@@ -22,7 +22,7 @@
             v-on:click="toggleAnswer(question)"
           >
             <h2 
-              class="w-11/12 text-lg text-left sm:text-xl font-semibold"
+              class="w-11/12 text-base text-left sm:text-lg font-semibold"
               v-html="question.ask"
             >
             </h2>
@@ -35,7 +35,7 @@
           </div>
           <transition name="slide-fade">
             <p
-              class="slide-fade-answer text-lg sm:text-xl text-gray-300 font-light tracking-wide py-2"
+              class="slide-fade-answer text-base sm:text-lg text-gray-300 font-light tracking-wide py-2"
               v-html="question.answer" 
               v-bind:key="question.id" 
               v-show="question.showAnswer"
@@ -44,6 +44,17 @@
           </transition>
         </div>
       </transition-group>
+    </div>
+
+    <div class="pt-4">
+      Looking to build a website ?
+      <a 
+        target="_blank" rel="noopener noreferrer" 
+        href="mailto:andikawilliam@outlook.com" 
+        class="hvr-bounce-to-top mr-1"
+      >
+        Let's chat
+      </a>
     </div>
   </div>
 </template>
@@ -62,19 +73,12 @@ export default {
         { 
           id: 1,
           ask: `"What should I call you?"`,
-          answer:`People usually call me <span class="italic">'Dika'</span>.
-          Though it usually doesn't sound good in English. 
-          So <span class="italic">'Andy'</span> works as well.`,
+          answer:`Usually it's <span class="italic">'Dika'</span>.
+          But <span class="italic">'Andy'</span> works as well`,
           showAnswer: false
         },
         { 
           id: 2,
-          ask: `"Are you a front-end or back-end developer?"`,
-          answer: `Currently, I'm more focused on the front end side of things.`,
-          showAnswer: false
-        },
-        { 
-          id: 3,
           ask: `"Do you accept web design projects?"`,
           answer: `Sure!
           <a 
@@ -82,23 +86,31 @@ export default {
             href="mailto:andikawilliam@outlook.com" 
             class="hvr-bounce-to-top mr-1"
           >
-            let's have a chat
+            Let's have a chat
           </a> if you're looking to build one`,
           showAnswer: false,
         },
         { 
-          id: 4,
-          ask: `"What books do you like to read?"`,
-          answer: `Check out my 
-              <a href="https://www.goodreads.com/andiwilliam" 
-              class="hvr-bounce-to-top">goodreads</a>, 
-              maybe we have some common book interests.`,
+          id: 3,
+          ask: `"How much is your rate?"`,
+          answer: `Every project is unique. It really depends on the requirements
+          you're looking for. <a 
+            target="_blank" rel="noopener noreferrer" 
+            href="mailto:andikawilliam@outlook.com" 
+            class="hvr-bounce-to-top mr-1"
+          >
+            Let's have a discussion
+          </a> and I'll give the rough estimate
+          `,
           showAnswer: false,
         },
         { 
-          id: 5,
-          ask: `"Can you hack Facebook?"`,
-          answer: `No..`,
+          id: 4,
+          ask: `"What is the process?"`,
+          answer: `It depends on the project, but generally we start with a 
+          discussion followed by design & prototype. Which after approval, we 
+          then move on to development
+          `,
           showAnswer: false
         },
       ]
