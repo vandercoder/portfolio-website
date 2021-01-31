@@ -66,7 +66,7 @@
 
 <script>
 import TheLine from '../components/TheLine.vue';
-import CleanprofImage from '../assets/cleanprof-web-2.png'
+import CleanprofImage from '../assets/cleanprof-web.png'
 import TemanGaweImage from '../assets/temangawe-web.png'
 import DitoBuwonoImage from '../assets/ditobuwono-web.png'
 
