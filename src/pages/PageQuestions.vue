@@ -76,7 +76,7 @@ export default {
         { 
           id: 3,
           ask: `"Do you accept web design projects?"`,
-          answer: `Yes,
+          answer: `Sure!
           <a 
             target="_blank" rel="noopener noreferrer" 
             href="mailto:andikawilliam@outlook.com" 
