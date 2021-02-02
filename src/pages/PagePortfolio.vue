@@ -36,6 +36,9 @@
               <p class="text-sm sm:text-base font-light text-gray-300">
                 {{ project.desc }}
               </p>
+              <p class="text-sm font-light text-gray-300">
+                {{ project.job }}
+              </p>
               <p
                 class="text-sm text-gray-500" 
                 v-if="project.stackIcon">
@@ -85,6 +88,7 @@ export default {
           link: "https://www.cleanprof.id/",
           image: CleanprofImage,
           imageLoaded: false,
+          job: "Development",
           stackIcon: "vuejs",
         },
         {
@@ -94,6 +98,7 @@ export default {
           link: "https://www.temangawe.com/",
           image: TemanGaweImage,
           imageLoaded: false,
+          job: "Design & Development",
           stackIcon: "react",
         },
         {
@@ -103,6 +108,7 @@ export default {
           link: "https://www.ditobuwono.com/",
           image: DitoBuwonoImage,
           imageLoaded: false,
+          job: "Design & Development", 
           stackIcon: "vuejs"
         },
       ]
